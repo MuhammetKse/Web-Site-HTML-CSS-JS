@@ -1,0 +1,423 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  
+  
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #252525;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #252525;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #252525;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+	
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #00aeef;
+	color: #fff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #252525;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #252525;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #252525;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #00aeef;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+body {
+  margin: 0;
+  font-family: 'Staatliches', cursive;
+}
+
+.loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: white;
+	width: 100%;
+	height: 100vh;
+	z-index: 9999; /* Sayfanın önünde */
+	opacity: 1;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+	animation: backgroundChange 0.5s linear 1s forwards, fadeOut 2s linear 2s forwards;
+  }
+
+.load-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 10vmax;
+  width: fit-content;
+  display: flex;
+  animation: colorChange 0.2s linear 1.5s forwards;
+}
+
+.loaded-text {
+  transform: scale(1.5);
+  animation: scaleText 0.2s linear .5s forwards;
+}
+
+.loading-text {
+  width: 0;
+  overflow: hidden;
+  animation: expand 0.5s linear 1s forwards;
+  white-space: nowrap;
+}
+
+main {
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes scaleText {
+  from {transform: scale(1.5)}
+  to {transform: scale(1)}
+}
+
+@keyframes expand {
+  from {width: 0;}
+  to {width: 36vmax;}
+}
+
+@keyframes backgroundChange {
+  from {background-color: white}
+  to {background-color: #00aeef}
+}
+
+@keyframes colorChange {
+  from {color: #00aeef}
+  to {color: white}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {
+    opacity: 0; 
+    z-index: -1;
+		 /* Elementi görünmez yapar */
+  }
+}
+
+
+
+
+/*WRAPPER SECTıOn */
+.stats-container {
+	display: grid;
+	gap: 24px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: 30px auto;
+	max-width: 1000px;
+	padding-inline: 16px;
+  }
+  
+  .stats-container .stat {
+	background: #00aeef;
+	padding: 24px;
+	text-align: center;
+	color: #edf2f4;
+  }
+  
+  .stats-container .stat .odometer {
+	font-size: 50px;
+	font-weight: bold;
+	display: inline-block;
+  }
+  
+  .stats-container .stat .type {
+	font-size: 20px;
+  }
+  
+  .odometer.plus {
+	position: relative;
+  }
+  
+  .odometer.plus::after {
+	content: "+";
+	position: absolute;
+	top: 0;
+	right: -16px;
+	font-size: 20px;
+  }
+  
+  @media (max-width: 700px) {
+	.stats-container {
+	  grid-template-columns: 1fr;
+	}
+  }
+
+  .bizeulas{
+	width: 100%;
+    float: left;
+    background-image: url(../images/bg3.jpeg);
+    padding: 30px 0px 20px 0px;
+    height: auto;
+    background-size: 100%;
+	
+}
+@media  (max-width: 575px){
+.bizeulas{
+	background-size:cover;
+}
+	}
+  /* CONTACT US*/
+
+
+.contactme{
+	position: relative;
+	
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+.contactme .contents{
+	max-width: 800px;
+	text-align: center;
+}
+.contactme .contents h2{
+	font-size: 36px;
+	font-weight: 500;
+	color: #252525;
+
+}
+.contactme .contents p{
+	font-weight: 500;
+	color:#252525;
+
+}
+.containers{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.containers .contactInfo{
+width: 50%;
+display: flex;
+flex-direction: column;
+
+}
+.containers .contactInfo .boxs{
+	position: relative;
+	padding: 20px 100px;
+	display: flex;
+
+}
+.containers .contactInfo .boxs .contacticon{
+	min-width: 60px;
+	height: 60px;
+	background: #00aeef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+
+}
+.containers .contactInfo .boxs .texts{
+	display: flex;
+	margin-left: 20px;
+	 font-size: 16px;
+	 color: #252525;
+	 flex-direction: column;
+	 font-weight: 300;
+}
+.containers .contactInfo .boxs .texts h3{
+font-weight: 1000;
+display:center;
+color: #252525;
+
+
+}
+.mapform{
+	display: block;
+}
